@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int positive = 0, negative = 0, even = 0, odd = 0;
+    
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    printf("Enter %d elements: ", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    for(i = 0; i < n; i++) {
+        // Check for positive and negative
+        if(arr[i] > 0) {
+            positive++;
+        } else if(arr[i] < 0) {
+            negative++;
+        }
+        
+        // Check for even and odd
+        if(arr[i] % 2 == 0) {
+            even++;
+        } else {
+            odd++;
+        }
+    }
+    
+    printf("\nCounts:\n");
+    printf("Positive: %d\n", positive);
+    printf("Negative: %d\n", negative);
+    printf("Even: %d\n", even);
+    printf("Odd: %d\n", odd);
+    
+    return 0;
+}
